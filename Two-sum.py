@@ -10,4 +10,4 @@ def two_sum(lst, k):
                 return True
     return False
 
-two_sum(lst, k)
+print(two_sum(lst, k))
