@@ -21,5 +21,3 @@ class Solution:
 
 print(Solution().getRange(arr, x))
 # [1, 4]
-print("sjasjfjs")
-# ...
