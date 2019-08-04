@@ -4,7 +4,6 @@ k = 5
 
 def two_sum(lst, k):
     length = len(lst)
-    result = []
     for i in range(length):
         for j in range(i+1, length):
             if lst[i] + lst[j] == k:
