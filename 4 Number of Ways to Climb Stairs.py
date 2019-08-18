@@ -18,4 +18,17 @@ def staircase(x):
     
     return int(suma)
 
-# Turns out the solution follows Fibonacci sequence:
+# Turns out the solution follows adjusted Fibonacci sequence (without the first 1).
+
+def fib_staircase(x):
+    
+    if x == 1:
+        return 1
+    elif x == 2:
+        return 2
+    else:
+        return (fib_staircase(x-2) + fib_staircase(x-1))
+
+# Example
+print(staircase(5))
+print(fib_staircase(5))
