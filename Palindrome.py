@@ -14,5 +14,5 @@ def palindrome_check(s):
     
 # Check
 s = 'abcda'
-palindrome_check_long(s)
+#palindrome_check_long(s)
 palindrome_check(s)
