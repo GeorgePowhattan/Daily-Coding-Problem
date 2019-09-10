@@ -1,3 +1,5 @@
+# Check a word whether or not it is a palindrome
+
 # Long definition
 def palindrome_check_long(s):
     binary = []
