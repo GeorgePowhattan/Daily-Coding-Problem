@@ -15,3 +15,7 @@ def maxSequence(arr):
             for j in range(i,len(arr)+1):
                current_max = max(current_max, sum(arr[i:j]))
         return(current_max)
+
+arr = [34, -50, 42, 14, -5, 86]
+
+print(maxSequence(arr))
