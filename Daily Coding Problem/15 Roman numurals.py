@@ -27,4 +27,18 @@ def romanToInt(string):
             i += 1
     return res
 
+# Iterating the Roman number backwards is arguably easier:
+def romanToInt2(string):
+    res = 0
+    previous = 0
+    for letter in reversed(string):
+        current = hashmap[letter]
+        if current < previous:
+            res -= current
+        else:
+            res += current
+        previous = current
+    return res      
+
 print(romanToInt(n))
+print(romanToInt2(n))
