@@ -12,5 +12,17 @@ print(permute(lst))
 
 
 # ------------------------------------------------------------------------------
-# without itertools - recursion?
+# Permutations without itertools - recursion
 
+def permute_rec(nums):
+    if (len(nums) == 1):
+        return [nums]
+
+    output = []
+    for l in permute_rec(nums[1:]):
+        for idx in range(len(nums)):
+            output.append(l[:idx] + [nums[0]] + l[idx:])
+    return output
+
+
+print(permute_rec([1, 2, 3]))
