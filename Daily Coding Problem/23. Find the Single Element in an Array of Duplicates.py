@@ -23,7 +23,7 @@ print(findSingle(arr))
 from collections import defaultdict
 
 def findSingle_hash(nums):
-    hashtable = defaultdict(int)
+    hashtable = defaultdict(int)    # classic dictionary will not allow adding +1 straight away
     for number in nums:
         hashtable[number] += 1
     return [count for count in hashtable if hashtable[count] == 1]
