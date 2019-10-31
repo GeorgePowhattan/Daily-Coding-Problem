@@ -12,10 +12,6 @@ def singleNumber(nums):
             result.append(number)
     return result
 
-# Solution using O(1) memory:
-def singleNumberConst(nums):
-    for number in lst:
-        
 
 lst = [4, 3, 2, 4, 1, 3, 2, 4]
 
