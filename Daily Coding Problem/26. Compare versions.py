@@ -7,12 +7,19 @@ Otherwise return 0.
 '''
 
 def compareVersion(version1, version2):
+    # convert the version strings into lists of numbers 
     ver1 = [int(number) for number in version1.split('.')]
     ver2 = [int(number) for number in version2.split('.')]
+    # fill zeroes to the end of the version list, which is shorted
+    while len(ver1) != len(ver2):
+        if len(ver1) > len(ver2):
+            ver2.append(0)
+        else: ver1.append(0)
+    # compare the two lists
     for number1, number2 in zip(ver1, ver2):
         if number1 > number2:
             return 1
-        if number1 < number2:
+        elif number1 < number2:
             return -1
     return 0
 
