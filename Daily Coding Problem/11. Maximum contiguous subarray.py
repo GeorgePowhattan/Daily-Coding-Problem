@@ -11,14 +11,15 @@ def max_subarray_sum(arr):
     sum_arr = []
     if all(element < 0 for element in arr):
         return 0
-    else:
-        for i in range(len(a)):
-            for j in range (i+1, len(a)+1):
-                sum_arr.append(sum(a[i:j]))
+    for i in range(len(a)):
+        for j in range (i+1, len(a)+1):
+            sum_arr.append(sum(a[i:j]))
     return max(sum_arr)
 
 # Better solution running in linear time:
 def max_subarray_sum_linear(arr):
+    if all(element < 0 for element in arr):
+        return 0
     max_sum_arr = 0
     sum_arr = 0
     for number in arr:
