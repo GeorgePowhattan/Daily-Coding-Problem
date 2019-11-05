@@ -18,10 +18,10 @@ def max_subarray_sum(arr):
 
 # Better solution running in linear time:
 def max_subarray_sum_linear(arr):
-    if all(element < 0 for element in arr):
-        return 0
     max_sum_arr = 0
     sum_arr = 0
+    if all(element < 0 for element in arr):
+        return 0
     for number in arr:
         if number >= 0:
             sum_arr += number
