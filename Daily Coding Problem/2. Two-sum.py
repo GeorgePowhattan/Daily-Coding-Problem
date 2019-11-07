@@ -22,14 +22,14 @@ print(two_sum(lst, k))
 # ------------------------------------------------------------------------------------------------------------------------------------
 # More efficient solution:
 
-def two_sum(lst, k):
+def two_sum2(lst, k):
     # In interim we store the target values to look for in the original list 
     interim = []
     for number in lst:
         interim.append(k - number)
     for num in interim:
-        return True if num in lst
+        if num in lst: return True
     return False
     # return any([True for num in interim if num in lst])
 
-print(two_sum(lst, k))
+print(two_sum2(lst, k))
