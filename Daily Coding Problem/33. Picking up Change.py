@@ -5,6 +5,7 @@ def max_change(mat):
         return sum([number for sublist in mat for number in sublist])
     if len(mat[0]) == 1:
         return sum([lst[0] for lst in mat])
+    # recursive solution: the max path collected is equal to the larger of the UP or LEFT max path, until the matrix of len(1) is reached.
     return max(max_change(mat[:][:-1]), max_change([lst[:-1] for lst in mat]) ) + mat[-1][-1]
     
 mat = [
