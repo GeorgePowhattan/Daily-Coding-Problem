@@ -11,14 +11,15 @@ def find_rank(n):
 
 def to_hex(n):
     # define hexadecimal:
-    hex_conversion_table = { i: fig for i, fig in enumerate(hex_table, start=1) }
+    hex_figures = '123456789ABCDEFG'
+    hex_conversion_table = { i: fig for i, fig in enumerate(hex_figures, start=1) }
     # define result string
     res = ''
     # find the largest 16-exponent of the number
     rank = find_rank(n)
     for i in reversed(range(rank+1)):
         div = 16**(i)
-        res += conversion[n // div]
+        res += hex_conversion_table[n // div]
         n = n % div
     return res
     
