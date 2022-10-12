@@ -7,8 +7,8 @@ Output: 1'''
 # Solution:
 def singleNumber(nums):
     result = []
-    for number in lst:
-        if lst.count(number) == 1:
+    for number in nums:
+        if nums.count(number) == 1:
             result.append(number)
     return result
 
